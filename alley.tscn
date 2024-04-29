@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b05rys7k3fvjj"]
+[gd_scene load_steps=7 format=3 uid="uid://b05rys7k3fvjj"]
 
 [ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_v48c3"]
+[ext_resource type="Script" path="res://ControlforDOOR.gd" id="3_ldktv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjkud"]
 size = Vector2(107.807, 178.3)
@@ -48,6 +49,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("3_ldktv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ControlforDOOR"]
 layout_mode = 0
@@ -67,3 +69,4 @@ layout_mode = 2
 [connection signal="mouse_entered" from="Door sign Alley" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Door sign Alley" to="." method="change_cursor_back"]
 [connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="ControlforDOOR" method="_on_button_pressed"]

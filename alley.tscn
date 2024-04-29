@@ -35,20 +35,21 @@ scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_aek8v")
 
 [node name="Door sign Alley" type="Area2D" parent="."]
-position = Vector2(-60.3653, 9.81466)
+position = Vector2(-60.3653, 11.4504)
+scale = Vector2(1.17684, 1.06543)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door sign Alley"]
 position = Vector2(-1.25903, 2.04474)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8b4ha")
 
-[node name="Control" type="Control" parent="."]
+[node name="ControlforDOOR" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlforDOOR"]
 layout_mode = 0
 offset_left = -73.6287
 offset_top = -3.33786e-05
@@ -56,9 +57,13 @@ offset_right = -33.6287
 offset_bottom = 40.0
 scale = Vector2(0.590772, 0.563791)
 
-[node name="Button" type="Button" parent="Control/VBoxContainer"]
+[node name="Button" type="Button" parent="ControlforDOOR/VBoxContainer"]
 layout_mode = 2
 
 [connection signal="mouse_entered" from="Barrel" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Barrel" to="." method="change_cursor_back"]
-[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Chef recipe" to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Chef recipe" to="." method="change_cursor_back"]
+[connection signal="mouse_entered" from="Door sign Alley" to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Door sign Alley" to="." method="change_cursor_back"]
+[connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -23,7 +23,6 @@ script = ExtResource("2_wpacn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Towel"]
 position = Vector2(320.106, 241.132)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_njy7l")
 
 [node name="Cabinet" type="Area2D" parent="."]
@@ -31,7 +30,6 @@ script = ExtResource("2_wpacn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabinet"]
 position = Vector2(72.4744, -45.6853)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_hq560")
 
 [node name="Mirror Letter" type="Area2D" parent="."]
@@ -39,7 +37,6 @@ script = ExtResource("2_wpacn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror Letter"]
 position = Vector2(-339.125, -26.4921)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_qjvu3")
 
 [connection signal="mouse_entered" from="Towel" to="Towel" method="change_cursor_hand"]

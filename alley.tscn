@@ -1,15 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b05rys7k3fvjj"]
 
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://ddneu6gj8sy40" path="res://Alley.png" id="1_i8s50"]
-=======
 [ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_v48c3"]
-<<<<<<< HEAD
 [ext_resource type="Script" path="res://ControlforDOOR.gd" id="3_ldktv"]
-=======
->>>>>>> 1b0460f3d0de1d57617af4a3a439c84d6d275c02
->>>>>>> c18ef55e551871698ed70e7d8048ac1edbc96967
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjkud"]
 size = Vector2(107.807, 178.3)
@@ -65,6 +58,7 @@ scale = Vector2(0.590772, 0.563791)
 
 [node name="Button" type="Button" parent="ControlforDOOR/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [connection signal="mouse_entered" from="Barrel" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Barrel" to="." method="change_cursor_back"]
@@ -72,5 +66,6 @@ layout_mode = 2
 [connection signal="mouse_exited" from="Chef recipe" to="." method="change_cursor_back"]
 [connection signal="mouse_entered" from="Door sign Alley" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Door sign Alley" to="." method="change_cursor_back"]
+[connection signal="mouse_entered" from="ControlforDOOR/VBoxContainer/Button" to="." method="change_cursor_hand"]
 [connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="ControlforDOOR" method="_on_button_pressed"]

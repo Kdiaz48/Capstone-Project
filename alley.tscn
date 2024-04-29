@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b05rys7k3fvjj"]
+[gd_scene load_steps=9 format=3 uid="uid://b05rys7k3fvjj"]
 
 [ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_v48c3"]
 [ext_resource type="Script" path="res://ControlforDOOR.gd" id="3_ldktv"]
 [ext_resource type="Script" path="res://barrel.gd" id="4_lteff"]
+[ext_resource type="Script" path="res://Controlforrecipe.gd" id="5_hnud5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjkud"]
 size = Vector2(107.807, 178.3)
@@ -61,7 +62,7 @@ scale = Vector2(0.590772, 0.563791)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="."]
+[node name="Controlforbarrel" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -393.0
@@ -70,7 +71,7 @@ offset_right = -272.0
 offset_bottom = 276.0
 script = ExtResource("4_lteff")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Controlforbarrel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.312
@@ -83,7 +84,26 @@ offset_right = 24.6994
 offset_bottom = 275.608
 scale = Vector2(1.99305, 5.49296)
 
-[node name="Button" type="Button" parent="Control/VBoxContainer"]
+[node name="Button" type="Button" parent="Controlforbarrel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Controlforrecipe" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_hnud5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controlforrecipe"]
+layout_mode = 0
+offset_left = 157.63
+offset_top = 454.203
+offset_right = 197.63
+offset_bottom = 494.203
+scale = Vector2(1.73459, 0.454738)
+
+[node name="Button" type="Button" parent="Controlforrecipe/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -94,6 +114,12 @@ size_flags_vertical = 3
 [connection signal="mouse_entered" from="Door sign Alley" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Door sign Alley" to="." method="change_cursor_back"]
 [connection signal="mouse_entered" from="ControlforDOOR/VBoxContainer/Button" to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="ControlforDOOR/VBoxContainer/Button" to="." method="change_cursor_back"]
 [connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="ControlforDOOR" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Controlforbarrel/VBoxContainer/Button" to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Controlforbarrel/VBoxContainer/Button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="Controlforbarrel/VBoxContainer/Button" to="Controlforbarrel" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Controlforrecipe/VBoxContainer/Button" to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Controlforrecipe/VBoxContainer/Button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="Controlforrecipe/VBoxContainer/Button" to="Controlforrecipe" method="_on_button_pressed"]

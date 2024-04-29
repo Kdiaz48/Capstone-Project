@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://damr7e4bwquul"]
 
-[ext_resource type="Texture2D" uid="uid://bsfbtm6uq7owo" path="res://kd03563_start_screen_for_a_hidden_item_detective_game_called_Wh_5ed8db38-de70-415d-be0b-bd00180864f9.png" id="1_w2gj8"]
+[ext_resource type="Texture2D" uid="uid://fjkgqsr6yx8g" path="res://kd03563_start_screen_for_a_hidden_item_detective_game_called_Wh_5ed8db38-de70-415d-be0b-bd00180864f9.png" id="1_w2gj8"]
 
 [node name="Kd03563StartScreenForAHiddenItemDetectiveGameCalledWh5Ed8Db38-de70-415d-be0b-bd00180864f9" type="Sprite2D"]
 position = Vector2(593, 376)

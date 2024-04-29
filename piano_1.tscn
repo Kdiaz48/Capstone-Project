@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blflawqj7rgxx"]
+
+[ext_resource type="Texture2D" uid="uid://bva3v8hf54e7h" path="res://piano1.png" id="1_kivwg"]
+
+[node name="Piano1" type="Sprite2D"]
+position = Vector2(578, 323.5)
+scale = Vector2(1.125, 0.633789)
+texture = ExtResource("1_kivwg")

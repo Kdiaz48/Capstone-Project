@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdp6d5a4bqvuv"]
+
+[ext_resource type="Script" path="res://STORY.gd" id="1_l0x4e"]
+[ext_resource type="Texture2D" uid="uid://d3ollguha262i" path="res://Copy of Warning Yellow Tape Crime Scene Investigation for College by Slidesgo.pptx.png" id="1_rx4cg"]
+
+[node name="Control2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l0x4e")
+
+[node name="CopyOfWarningYellowTapeCrimeSceneInvestigationForCollegeBySlidesgo_pptx" type="Sprite2D" parent="."]
+position = Vector2(1811.97, 1141.5)
+scale = Vector2(1.8969, 2.15648)
+texture = ExtResource("1_rx4cg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1673.0
+offset_top = 1929.0
+offset_right = 1729.0
+offset_bottom = 1969.0
+scale = Vector2(4.8989, 4.08079)
+
+[node name="startgame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START"
+
+[connection signal="pressed" from="VBoxContainer/startgame" to="." method="_on_startgame_pressed"]

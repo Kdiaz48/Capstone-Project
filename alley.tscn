@@ -1,8 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://b05rys7k3fvjj"]
 
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://ddneu6gj8sy40" path="res://Alley.png" id="1_i8s50"]
+=======
 [ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_v48c3"]
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://ControlforDOOR.gd" id="3_ldktv"]
+=======
+>>>>>>> 1b0460f3d0de1d57617af4a3a439c84d6d275c02
+>>>>>>> c18ef55e551871698ed70e7d8048ac1edbc96967
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjkud"]
 size = Vector2(107.807, 178.3)
@@ -24,7 +31,6 @@ position = Vector2(-341.957, 183.208)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrel"]
 position = Vector2(10.3726, 72.2471)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jjkud")
 
 [node name="Chef recipe" type="Area2D" parent="."]
@@ -32,7 +38,6 @@ position = Vector2(192.659, 466.198)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chef recipe"]
 position = Vector2(0, -1.90839)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_aek8v")
 
 [node name="Door sign Alley" type="Area2D" parent="."]
@@ -41,7 +46,6 @@ scale = Vector2(1.17684, 1.06543)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door sign Alley"]
 position = Vector2(-1.25903, 2.04474)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8b4ha")
 
 [node name="ControlforDOOR" type="Control" parent="."]

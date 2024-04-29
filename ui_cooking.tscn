@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cncgssq83dl55"]
+
+[ext_resource type="Texture2D" uid="uid://bi0m26ahn6hf3" path="res://UI cooking.png" id="1_vna1t"]
+[ext_resource type="Script" path="res://testdemo.gd" id="2_2msul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3weec"]
+size = Vector2(42, 62)
+
+[node name="UiCooking" type="Sprite2D"]
+position = Vector2(513, 278)
+texture = ExtResource("1_vna1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, -28)
+shape = SubResource("RectangleShape2D_3weec")
+script = ExtResource("2_2msul")

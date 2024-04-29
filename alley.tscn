@@ -1,6 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b05rys7k3fvjj"]
+[gd_scene load_steps=6 format=3 uid="uid://b05rys7k3fvjj"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://ddneu6gj8sy40" path="res://Alley.png" id="1_i8s50"]
+=======
+[ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
+[ext_resource type="Script" path="res://hand cursor.gd" id="2_v48c3"]
+>>>>>>> 1b0460f3d0de1d57617af4a3a439c84d6d275c02
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjkud"]
 size = Vector2(107.807, 178.3)
@@ -15,6 +20,7 @@ size = Vector2(18.1621, 21.5378)
 position = Vector2(1500.5, 934)
 scale = Vector2(2.94043, 1.83398)
 texture = ExtResource("1_i8s50")
+script = ExtResource("2_v48c3")
 
 [node name="Barrel" type="Area2D" parent="."]
 position = Vector2(-341.957, 183.208)
@@ -36,3 +42,24 @@ position = Vector2(-60.3653, 9.81466)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door sign Alley"]
 position = Vector2(-1.25903, 2.04474)
 shape = SubResource("RectangleShape2D_8b4ha")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = -73.6287
+offset_top = -3.33786e-05
+offset_right = -33.6287
+offset_bottom = 40.0
+scale = Vector2(0.590772, 0.563791)
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Barrel" to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Barrel" to="." method="change_cursor_back"]
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_button_pressed"]

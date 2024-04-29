@@ -14,3 +14,8 @@ func change_cursor_hand():
 	
 func change_cursor_back():
 	Input.set_custom_mouse_cursor(null)
+
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://bathroom_1.tscn")# Replace with function body.

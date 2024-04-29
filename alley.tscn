@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b05rys7k3fvjj"]
 
-[ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
+[ext_resource type="Texture2D" uid="uid://ddneu6gj8sy40" path="res://Alley.png" id="1_i8s50"]
 
 [node name="Alley" type="Sprite2D"]
 position = Vector2(572, 323)

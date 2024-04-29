@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://nfhvy6cdkgv"
-=======
-uid="uid://baet2gvgo50r0"
->>>>>>> 01d956c1a0ae0ab874133b311292e7a98cc5e619
-path="res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"
+uid="uid://qp3425ag1r44"
+path="res://.godot/imported/start screen.webp-1049db9bd2524e650ebac29cd5a68959.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI books & more.png"
-dest_files=["res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"]
+source_file="res://start screen.webp"
+dest_files=["res://.godot/imported/start screen.webp-1049db9bd2524e650ebac29cd5a68959.ctex"]
 
 [params]
 

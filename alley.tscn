@@ -3,6 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://ddneu6gj8sy40" path="res://Alley.png" id="1_i8s50"]
 
 [node name="Alley" type="Sprite2D"]
-position = Vector2(572, 323)
-scale = Vector2(1.12305, 0.625)
+position = Vector2(574, 325)
+scale = Vector2(1.1543, 0.644531)
 texture = ExtResource("1_i8s50")

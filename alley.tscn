@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b05rys7k3fvjj"]
+[gd_scene load_steps=8 format=3 uid="uid://b05rys7k3fvjj"]
 
 [ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_v48c3"]
 [ext_resource type="Script" path="res://ControlforDOOR.gd" id="3_ldktv"]
+[ext_resource type="Script" path="res://barrel.gd" id="4_lteff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjkud"]
 size = Vector2(107.807, 178.3)
@@ -60,6 +61,32 @@ scale = Vector2(0.590772, 0.563791)
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -393.0
+offset_top = 50.0
+offset_right = -272.0
+offset_bottom = 276.0
+script = ExtResource("4_lteff")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = -0.546
+anchor_right = 0.312
+anchor_bottom = -0.546
+offset_left = -33.3006
+offset_top = 244.608
+offset_right = 24.6994
+offset_bottom = 275.608
+scale = Vector2(1.99305, 5.49296)
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
 [connection signal="mouse_entered" from="Barrel" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Barrel" to="." method="change_cursor_back"]
 [connection signal="mouse_entered" from="Chef recipe" to="." method="change_cursor_hand"]
@@ -69,3 +96,4 @@ size_flags_vertical = 3
 [connection signal="mouse_entered" from="ControlforDOOR/VBoxContainer/Button" to="." method="change_cursor_hand"]
 [connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ControlforDOOR/VBoxContainer/Button" to="ControlforDOOR" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]

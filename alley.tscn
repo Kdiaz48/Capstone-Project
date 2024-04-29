@@ -1,8 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://b05rys7k3fvjj"]
+[gd_scene load_steps=5 format=3 uid="uid://b05rys7k3fvjj"]
 
-[ext_resource type="Texture2D" uid="uid://ddneu6gj8sy40" path="res://Alley.png" id="1_i8s50"]
+[ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjkud"]
+size = Vector2(107.807, 178.3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aek8v"]
+size = Vector2(64.6164, 17.9936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8b4ha"]
+size = Vector2(18.1621, 21.5378)
 
 [node name="Alley" type="Sprite2D"]
-position = Vector2(574, 325)
-scale = Vector2(1.1543, 0.644531)
+position = Vector2(1500.5, 934)
+scale = Vector2(2.94043, 1.83398)
 texture = ExtResource("1_i8s50")
+
+[node name="Barrel" type="Area2D" parent="."]
+position = Vector2(-341.957, 183.208)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrel"]
+position = Vector2(10.3726, 72.2471)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_jjkud")
+
+[node name="Chef recipe" type="Area2D" parent="."]
+position = Vector2(192.659, 466.198)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chef recipe"]
+position = Vector2(0, -1.90839)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aek8v")
+
+[node name="Door sign Alley" type="Area2D" parent="."]
+position = Vector2(-60.3653, 9.81466)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door sign Alley"]
+position = Vector2(-1.25903, 2.04474)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8b4ha")

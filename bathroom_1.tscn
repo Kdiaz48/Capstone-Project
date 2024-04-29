@@ -1,8 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://kmuenachuxdq"]
+[gd_scene load_steps=6 format=3 uid="uid://kmuenachuxdq"]
 
 [ext_resource type="Texture2D" uid="uid://cxyxxs80moubn" path="res://bathroom1.png" id="1_dokug"]
+[ext_resource type="Script" path="res://hand cursor.gd" id="2_wpacn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njy7l"]
+size = Vector2(92.041, 157.871)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq560"]
+size = Vector2(47.6242, 29.736)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjvu3"]
+size = Vector2(34.1142, 43.793)
 
 [node name="Bathroom1" type="Sprite2D"]
 position = Vector2(1501.5, 939)
 scale = Vector2(2.94434, 1.84961)
 texture = ExtResource("1_dokug")
+
+[node name="Towel" type="Area2D" parent="."]
+position = Vector2(-56.8888, -33.5206)
+script = ExtResource("2_wpacn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Towel"]
+position = Vector2(320.106, 241.132)
+shape = SubResource("RectangleShape2D_njy7l")
+
+[node name="Cabinet" type="Area2D" parent="."]
+script = ExtResource("2_wpacn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabinet"]
+position = Vector2(72.4744, -45.6853)
+shape = SubResource("RectangleShape2D_hq560")
+
+[node name="Mirror Letter" type="Area2D" parent="."]
+script = ExtResource("2_wpacn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror Letter"]
+position = Vector2(-339.125, -26.4921)
+shape = SubResource("RectangleShape2D_qjvu3")
+
+[connection signal="mouse_entered" from="Towel" to="Towel" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Towel" to="Towel" method="change_cursor_back"]
+[connection signal="mouse_entered" from="Cabinet" to="Towel" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Cabinet" to="Towel" method="change_cursor_back"]
+[connection signal="mouse_entered" from="Mirror Letter" to="Towel" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Mirror Letter" to="Towel" method="change_cursor_back"]

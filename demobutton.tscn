@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvjm5p245h6fp"]
+
+[ext_resource type="Script" path="res://demobutton.gd" id="1_mbdec"]
+[ext_resource type="PackedScene" uid="uid://kmuenachuxdq" path="res://bathroom_1.tscn" id="2_c1o8s"]
+
+[node name="demobutton" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00311, 1.00371)
+script = ExtResource("1_mbdec")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 440.628
+offset_top = 836.895
+offset_right = 480.628
+offset_bottom = 876.895
+scale = Vector2(3.76962, 3.61134)
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "hi
+"
+
+[node name="Bathroom1" parent="." instance=ExtResource("2_c1o8s")]
+position = Vector2(1509.3, 939.514)
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

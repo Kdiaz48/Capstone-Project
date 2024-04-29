@@ -34,3 +34,4 @@ layout_mode = 2
 text = "Go to address..."
 
 [connection signal="pressed" from="VBoxContainer/back to scene" to="." method="_on_back_to_scene_pressed"]
+[connection signal="pressed" from="VBoxContainer/go to warehouse" to="." method="_on_go_to_warehouse_pressed"]

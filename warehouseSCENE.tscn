@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnsjchcy0xkja"]
+
+[ext_resource type="Texture2D" uid="uid://bjdkb1yhej2ni" path="res://warehouse1.png" id="1_jfsyt"]
+
+[node name="Warehouse1" type="Sprite2D"]
+position = Vector2(1995, 1223)
+scale = Vector2(3.9043, 2.39844)
+texture = ExtResource("1_jfsyt")

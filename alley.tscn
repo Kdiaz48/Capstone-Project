@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b05rys7k3fvjj"]
 
-[ext_resource type="Texture2D" uid="uid://bbfwa3x0loku" path="res://Alley.png" id="1_i8s50"]
+[ext_resource type="Texture2D" uid="uid://ddneu6gj8sy40" path="res://Alley.png" id="1_i8s50"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_v48c3"]
 [ext_resource type="Script" path="res://ControlforDOOR.gd" id="3_ldktv"]
 
@@ -14,8 +14,8 @@ size = Vector2(64.6164, 17.9936)
 size = Vector2(18.1621, 21.5378)
 
 [node name="Alley" type="Sprite2D"]
-position = Vector2(1500.5, 934)
-scale = Vector2(2.94043, 1.83398)
+position = Vector2(2010.5, 1172)
+scale = Vector2(3.93652, 2.29883)
 texture = ExtResource("1_i8s50")
 script = ExtResource("2_v48c3")
 

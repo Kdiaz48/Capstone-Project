@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://clb7okqvt6hbr"]
+
+[ext_resource type="Script" path="res://DOORscene(alley).gd" id="1_4cuqm"]
+[ext_resource type="Texture2D" uid="uid://den75wlfed3ux" path="res://DetectiveDialogue/59.png" id="1_sk6cr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4cuqm")
+
+[node name="doorScene" type="Sprite2D" parent="."]
+position = Vector2(1826, 1174)
+scale = Vector2(1.93542, 2.21296)
+texture = ExtResource("1_sk6cr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1638.0
+offset_top = 976.0
+offset_right = 1790.0
+offset_bottom = 1016.0
+scale = Vector2(2.21372, 3.70366)
+
+[node name="go back to scene" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Go back to scene..."
+
+[connection signal="pressed" from="VBoxContainer/go back to scene" to="." method="_on_go_back_to_scene_pressed"]

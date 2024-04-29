@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3tko0r8gwswi"]
+
+[ext_resource type="Script" path="res://RecipeNote.gd" id="1_xdukq"]
+[ext_resource type="Texture2D" uid="uid://dquxxdk7cvmqk" path="res://DetectiveDialogue/Copy of Warning Yellow Tape Crime Scene Investigation for College by Slidesgo.pptx.png" id="2_ew1c7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdukq")
+
+[node name="CopyOfWarningYellowTapeCrimeSceneInvestigationForCollegeBySlidesgo_pptx" type="Sprite2D" parent="."]
+position = Vector2(1796.5, 1157.75)
+scale = Vector2(1.8724, 2.14491)
+texture = ExtResource("2_ew1c7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1575.0
+offset_top = 930.0
+offset_right = 1703.0
+offset_bottom = 996.0
+scale = Vector2(1.71965, 2.35082)
+
+[node name="back to scene" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back to alley..."
+
+[node name="go to warehouse" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Go to address..."
+
+[connection signal="pressed" from="VBoxContainer/back to scene" to="." method="_on_back_to_scene_pressed"]

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bva3v8hf54e7h"
+=======
+uid="uid://dig4c2s6k5hwj"
+>>>>>>> 8db05cc9a440d9db7f0f60a6ab01f0de1176f387
 path="res://.godot/imported/piano1.png-28f6926a49181fe3d5e46740f1fa27b6.ctex"
 metadata={
 "vram_texture": false

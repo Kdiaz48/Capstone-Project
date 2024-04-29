@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc5epjaudp8ro"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_sfppo"]
+[ext_resource type="Texture2D" uid="uid://fjkgqsr6yx8g" path="res://kd03563_start_screen_for_a_hidden_item_detective_game_called_Wh_5ed8db38-de70-415d-be0b-bd00180864f9.png" id="2_y1toq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sfppo")
+
+[node name="Kd03563StartScreenForAHiddenItemDetectiveGameCalledWh5Ed8Db38-de70-415d-be0b-bd00180864f9" type="Sprite2D" parent="."]
+position = Vector2(1822, 1123.25)
+scale = Vector2(3.91435, 2.42238)
+texture = ExtResource("2_y1toq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1832.0
+offset_right = 243.0
+offset_bottom = 1898.0
+scale = Vector2(4.8602, 6.50039)
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START
+"
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "CONTINUE"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

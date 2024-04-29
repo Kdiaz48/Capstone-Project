@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4pc064ifynls"]
+
+[ext_resource type="Texture2D" uid="uid://balc748yi07vi" path="res://DetectiveDialogue/57.png" id="1_cv27f"]
+[ext_resource type="Script" path="res://AlleyPreface.gd" id="1_sxbl0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sxbl0")
+
+[node name="AlleyPreface" type="Sprite2D" parent="."]
+position = Vector2(1989, 1185)
+scale = Vector2(2.08437, 2.1963)
+texture = ExtResource("1_cv27f")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2252.0
+offset_top = 1776.0
+offset_right = 2344.0
+offset_bottom = 1807.0
+scale = Vector2(3.82858, 3.9901)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://nfhvy6cdkgv"
-=======
-uid="uid://baet2gvgo50r0"
->>>>>>> 01d956c1a0ae0ab874133b311292e7a98cc5e619
-path="res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"
+uid="uid://bnmo7d16jvflx"
+path="res://.godot/imported/Ai_Cursor_Open.png-1b6ded6e0da8a80b887e80361bd967a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI books & more.png"
-dest_files=["res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"]
+source_file="res://Ai_Cursor_Open.png"
+dest_files=["res://.godot/imported/Ai_Cursor_Open.png-1b6ded6e0da8a80b887e80361bd967a5.ctex"]
 
 [params]
 

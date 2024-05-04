@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbn3cacgpn7wc"]
+
+[ext_resource type="Script" path="res://Mansion6.gd" id="1_inim0"]
+[ext_resource type="Texture2D" uid="uid://djqnrw01qjsym" path="res://sceneImages/DialogueAtMansion/Mansion6.png" id="1_y4jdv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_inim0")
+
+[node name="Mansion6" type="Sprite2D" parent="."]
+position = Vector2(1871, 1127)
+scale = Vector2(1.96563, 2.11852)
+texture = ExtResource("1_y4jdv")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1460.0
+offset_top = 744.0
+offset_right = 1552.0
+offset_bottom = 775.0
+scale = Vector2(3.67352, 3.48711)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

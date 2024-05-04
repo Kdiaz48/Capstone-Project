@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnsjchcy0xkja"]
+[gd_scene load_steps=2 format=3 uid="uid://s3ro34xycje0"]
 
 [ext_resource type="Texture2D" uid="uid://bjdkb1yhej2ni" path="res://warehouse1.png" id="1_jfsyt"]
 
@@ -6,3 +6,14 @@
 position = Vector2(1995, 1223)
 scale = Vector2(3.9043, 2.39844)
 texture = ExtResource("1_jfsyt")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

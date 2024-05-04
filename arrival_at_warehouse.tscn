@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2wyexhgfjekk"]
+
+[ext_resource type="Texture2D" uid="uid://b0sfpot7ienpm" path="res://DetectiveDialogue/ArrivalAtWarehouse.png" id="1_1h6sk"]
+
+[node name="ArrivalAtWarehouse" type="Sprite2D"]
+position = Vector2(2020, 1231)
+scale = Vector2(2.10833, 2.2963)
+texture = ExtResource("1_1h6sk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

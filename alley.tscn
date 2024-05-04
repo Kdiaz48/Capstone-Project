@@ -16,8 +16,8 @@ size = Vector2(64.6164, 17.9936)
 size = Vector2(18.1621, 21.5378)
 
 [node name="Alley" type="Sprite2D"]
-position = Vector2(2010.5, 1172)
-scale = Vector2(3.93652, 2.29883)
+position = Vector2(1971.5, 1120)
+scale = Vector2(3.86035, 2.19727)
 texture = ExtResource("1_i8s50")
 script = ExtResource("2_v48c3")
 
@@ -106,6 +106,10 @@ scale = Vector2(1.73459, 0.454738)
 [node name="Button" type="Button" parent="Controlforrecipe/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="MenuBar" type="MenuBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="mouse_entered" from="Barrel" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Barrel" to="." method="change_cursor_back"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvcvx3ql7fwix"]
+
+[ext_resource type="Texture2D" uid="uid://8wiurrkskhyw" path="res://sceneImages/HiddenItemsLIVINGROOM/LRClock.png" id="1_dnvq0"]
+[ext_resource type="Script" path="res://LRClock.gd" id="1_hemno"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hemno")
+
+[node name="LrClock" type="Sprite2D" parent="."]
+position = Vector2(1922, 1126)
+scale = Vector2(2.00417, 2.11296)
+texture = ExtResource("1_dnvq0")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1806.0
+offset_top = 748.0
+offset_right = 1898.0
+offset_bottom = 779.0
+scale = Vector2(3.78646, 3.02854)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

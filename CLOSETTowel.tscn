@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://frf1kim53na4"]
+
+[ext_resource type="Script" path="res://CLOSETTowel.gd" id="1_7mt8v"]
+[ext_resource type="Texture2D" uid="uid://dme2gkx2vedvv" path="res://sceneImages/HiddenItemsCLOSET/CLOSETKitchenTowel.png" id="2_1f2rl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7mt8v")
+
+[node name="ClosetKitchenTowel" type="Sprite2D" parent="."]
+position = Vector2(1873, 1117)
+scale = Vector2(1.96354, 2.1)
+texture = ExtResource("2_1f2rl")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1698.0
+offset_top = 722.0
+offset_right = 1825.0
+offset_bottom = 753.0
+scale = Vector2(3.38776, 3.77419)
+text = "Back to scene..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

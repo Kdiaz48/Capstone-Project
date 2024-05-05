@@ -19,12 +19,12 @@ texture = ExtResource("1_srgew")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1646.0
-offset_top = 860.0
-offset_right = 1739.0
-offset_bottom = 891.0
+offset_left = 1550.0
+offset_top = 856.0
+offset_right = 1709.0
+offset_bottom = 887.0
 scale = Vector2(2.91273, 2.59027)
-text = "Go inside...
+text = "Go to coordinates...
 "
 
 [node name="Button" type="Button" parent="."]

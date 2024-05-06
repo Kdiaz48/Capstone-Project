@@ -11,6 +11,3 @@ func change_cursor_hand():
 	
 func change_cursor_back():
 	Input.set_custom_mouse_cursor(null)
-
-
-

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfimkekpt6xor"]
+
+[ext_resource type="Texture2D" uid="uid://cv34bwyp4rpcg" path="res://study1.png" id="1_pd1gv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Study1" type="Sprite2D" parent="."]
+position = Vector2(1877, 1122)
+scale = Vector2(3.67773, 2.2207)
+texture = ExtResource("1_pd1gv")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bph2s4tnvswd5"]
+
+[ext_resource type="Script" path="res://CLOSETCodeRight1.gd" id="1_vcyja"]
+[ext_resource type="Texture2D" uid="uid://cpjcunvlf8sgk" path="res://sceneImages/HiddenItemsCLOSET/CLOSETCodeRight1.png" id="2_mdih2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vcyja")
+
+[node name="ClosetCodeRight1" type="Sprite2D" parent="."]
+position = Vector2(1879, 1124)
+scale = Vector2(1.95729, 2.10556)
+texture = ExtResource("2_mdih2")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1746.0
+offset_top = 718.0
+offset_right = 1838.0
+offset_bottom = 749.0
+scale = Vector2(3.66667, 3.34286)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

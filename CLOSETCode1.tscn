@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnbo7ht5wirxy"]
+
+[ext_resource type="Script" path="res://CLOSETCode1.gd" id="1_iq2qw"]
+[ext_resource type="Texture2D" uid="uid://bc7awaai8kqer" path="res://sceneImages/HiddenItemsCLOSET/CLOSETCode.png" id="1_tlgq1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iq2qw")
+
+[node name="ClosetCode" type="Sprite2D" parent="."]
+position = Vector2(1879, 1124)
+scale = Vector2(1.96771, 2.10556)
+texture = ExtResource("1_tlgq1")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1774.0
+offset_top = 728.0
+offset_right = 1866.0
+offset_bottom = 759.0
+scale = Vector2(2.81584, 2.9312)
+text = "1248"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1776.0
+offset_top = 638.0
+offset_right = 1868.0
+offset_bottom = 669.0
+scale = Vector2(2.81584, 2.9312)
+text = "1258"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1774.0
+offset_top = 822.0
+offset_right = 1866.0
+offset_bottom = 853.0
+scale = Vector2(2.81584, 2.9312)
+text = "1246"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

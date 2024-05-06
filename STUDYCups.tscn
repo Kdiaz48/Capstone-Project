@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c617dhiegbo03"]
+
+[ext_resource type="Script" path="res://STUDYCups.gd" id="1_66lpf"]
+[ext_resource type="Texture2D" uid="uid://cvroo5hl6fnba" path="res://sceneImages/HiddenItemsSTUDY/STUDYCups.png" id="2_4utks"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_66lpf")
+
+[node name="StudyCups" type="Sprite2D" parent="."]
+position = Vector2(1879, 1117)
+scale = Vector2(1.96146, 2.08519)
+texture = ExtResource("2_4utks")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1808.0
+offset_top = 710.0
+offset_right = 1939.0
+offset_bottom = 741.0
+scale = Vector2(2.13636, 3.31214)
+text = "Back to scene... "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

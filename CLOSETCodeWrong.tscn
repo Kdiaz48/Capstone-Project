@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgygb5xyw5vk2"]
+
+[ext_resource type="Script" path="res://CLOSETCodeWrong.gd" id="1_a6ocb"]
+[ext_resource type="Texture2D" uid="uid://cmb4d0gpaqyiu" path="res://sceneImages/HiddenItemsCLOSET/CLOSETCodeWrong.png" id="2_yf4mp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a6ocb")
+
+[node name="ClosetCodeWrong" type="Sprite2D" parent="."]
+position = Vector2(1886, 1124)
+scale = Vector2(1.9625, 2.10185)
+texture = ExtResource("2_yf4mp")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1706.0
+offset_top = 684.0
+offset_right = 1847.0
+offset_bottom = 715.0
+scale = Vector2(2.93147, 5)
+text = "Back to options..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

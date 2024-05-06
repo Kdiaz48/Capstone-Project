@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dox2l18cicgr4"]
+
+[ext_resource type="Script" path="res://STUDYWallet.gd" id="1_735ig"]
+[ext_resource type="Texture2D" uid="uid://bloi7rq3lp6m" path="res://sceneImages/HiddenItemsSTUDY/STUDYWallet.png" id="2_festk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_735ig")
+
+[node name="StudyWallet" type="Sprite2D" parent="."]
+position = Vector2(1878, 1123)
+scale = Vector2(1.96458, 2.0963)
+texture = ExtResource("2_festk")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1818.0
+offset_top = 776.0
+offset_right = 1945.0
+offset_bottom = 807.0
+scale = Vector2(2.01974, 2.49069)
+text = "Back to scene..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://6vatlj23m8p5"]
+
+[ext_resource type="Texture2D" uid="uid://bpug0mm20mf56" path="res://sceneImages/HiddenItemsCLOSET/CLOSETCodeRight4.png" id="1_6ejbn"]
+[ext_resource type="Script" path="res://CLOSETCodeRight4.gd" id="1_xi3xx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xi3xx")
+
+[node name="ClosetCodeRight4" type="Sprite2D" parent="."]
+position = Vector2(1894, 1126)
+scale = Vector2(1.97292, 2.10556)
+texture = ExtResource("1_6ejbn")
+
+[node name="BackToScene" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1764.0
+offset_top = 708.0
+offset_right = 1891.0
+offset_bottom = 739.0
+scale = Vector2(2.24233, 3.12291)
+text = "Back to scene..."
+
+[node name="NextScene" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1766.0
+offset_top = 814.0
+offset_right = 1873.0
+offset_bottom = 845.0
+scale = Vector2(2.66051, 3.30216)
+text = "Next scene..."
+
+[connection signal="pressed" from="BackToScene" to="." method="_on_back_to_scene_pressed"]
+[connection signal="pressed" from="NextScene" to="." method="_on_next_scene_pressed"]

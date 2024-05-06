@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl6pb0inc6xi3"]
+
+[ext_resource type="Texture2D" uid="uid://ck760hg1ursxv" path="res://DetectiveDialogue/TalkToChef.png" id="1_lbhqs"]
+[ext_resource type="Script" path="res://TalkToChef.gd" id="1_nvbvs"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nvbvs")
+
+[node name="TalkToChef" type="Sprite2D" parent="."]
+position = Vector2(1804, 1131)
+scale = Vector2(1.88333, 2.11481)
+texture = ExtResource("1_lbhqs")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1900.0
+offset_top = 1656.0
+offset_right = 1992.0
+offset_bottom = 1687.0
+scale = Vector2(2.64173, 3.49025)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

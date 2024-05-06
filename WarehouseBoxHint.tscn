@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2d38b0iamaw"]
+
+[ext_resource type="Texture2D" uid="uid://cfm8g7jryjf7q" path="res://sceneImages/WarehouseHiddenItems/WarehouseBoxHint.png" id="1_ad58f"]
+[ext_resource type="Script" path="res://WarehouseBoxHint.gd" id="1_o6yej"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o6yej")
+
+[node name="WarehouseBoxHint" type="Sprite2D" parent="."]
+position = Vector2(1929, 1152)
+scale = Vector2(2.02604, 2.15741)
+texture = ExtResource("1_ad58f")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1518.0
+offset_top = 770.0
+offset_right = 1687.0
+offset_bottom = 805.0
+scale = Vector2(3.21059, 3.12723)
+text = "Back to warehouse...
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1pnq7tc75snw"]
+
+[ext_resource type="Texture2D" uid="uid://11cbkwk3054c" path="res://DetectiveDialogue/ChefLeaving.png" id="1_8v50u"]
+[ext_resource type="Script" path="res://ChefLeaving.gd" id="1_uvh1f"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uvh1f")
+
+[node name="ChefLeaving" type="Sprite2D" parent="."]
+position = Vector2(2046, 1133)
+scale = Vector2(2.14896, 2.11481)
+texture = ExtResource("1_8v50u")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1754.0
+offset_top = 874.0
+offset_right = 1846.0
+offset_bottom = 905.0
+scale = Vector2(2.75726, 2.6927)
+text = "Continue...
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

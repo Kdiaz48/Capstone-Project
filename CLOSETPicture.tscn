@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt4mxbf3o4ura"]
+
+[ext_resource type="Script" path="res://CLOSETPicture.gd" id="1_ivv2p"]
+[ext_resource type="Texture2D" uid="uid://bthiy53iii7qu" path="res://sceneImages/HiddenItemsCLOSET/CLOSETPicture.png" id="2_8fxxf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ivv2p")
+
+[node name="ClosetPicture" type="Sprite2D" parent="."]
+position = Vector2(1872, 1114)
+scale = Vector2(1.96458, 2.08704)
+texture = ExtResource("2_8fxxf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1694.0
+offset_top = 790.0
+offset_right = 1821.0
+offset_bottom = 821.0
+scale = Vector2(3.27723, 3.70073)
+text = "Back to scene..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

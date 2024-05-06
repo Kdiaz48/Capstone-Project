@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://br4dheuoe75rr"]
+
+[ext_resource type="Texture2D" uid="uid://qfjwqieeaf3r" path="res://sceneImages/WarehouseHiddenItems/WarehouseCoordinates.png" id="1_srgew"]
+[ext_resource type="Script" path="res://WarehouseCoordinates.gd" id="1_vtr5d"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vtr5d")
+
+[node name="WarehouseCoordinates" type="Sprite2D" parent="."]
+position = Vector2(1930, 1161)
+scale = Vector2(2.02292, 2.16667)
+texture = ExtResource("1_srgew")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1550.0
+offset_top = 856.0
+offset_right = 1709.0
+offset_bottom = 887.0
+scale = Vector2(2.91273, 2.59027)
+text = "Go to coordinates...
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1520.0
+offset_top = 768.0
+offset_right = 1689.0
+offset_bottom = 799.0
+scale = Vector2(3.10419, 2.51198)
+text = "Back to warehouse..."
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://s3ro34xycje0"]
 
-[ext_resource type="Texture2D" uid="uid://djabeo25mjqt5" path="res://warehouse1.png" id="1_jfsyt"]
+[ext_resource type="Texture2D" uid="uid://bjdkb1yhej2ni" path="res://warehouse1.png" id="1_jfsyt"]
 [ext_resource type="Script" path="res://warehousebox button 1.gd" id="2_c7sfg"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_jeybg"]
 [ext_resource type="Script" path="res://warehouse box 2.gd" id="4_5qawx"]

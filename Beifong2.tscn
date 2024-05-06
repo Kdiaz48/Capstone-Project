@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0f2fg2u7q4aj"]
+
+[ext_resource type="Script" path="res://Beifong2.gd" id="1_6bx8h"]
+[ext_resource type="Texture2D" uid="uid://db0ii07qvhld1" path="res://sceneImages/DialogueOFFICE/Mr.Beifong/BEIFONG2.png" id="1_tdgjr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bx8h")
+
+[node name="Beifong2" type="Sprite2D" parent="."]
+position = Vector2(1879, 1120)
+scale = Vector2(1.96563, 2.09074)
+texture = ExtResource("1_tdgjr")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1854.0
+offset_top = 1710.0
+offset_right = 1946.0
+offset_bottom = 1741.0
+scale = Vector2(2.37931, 3.08053)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

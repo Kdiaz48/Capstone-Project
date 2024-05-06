@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://8jtt0fopcapr"]
+
+[ext_resource type="Script" path="res://Jordan4.gd" id="1_876rj"]
+[ext_resource type="Texture2D" uid="uid://hrw2w07evy5s" path="res://sceneImages/DialogueOFFICE/ChefJordan/JORDAN4.png" id="1_hanqu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_876rj")
+
+[node name="Jordan4" type="Sprite2D" parent="."]
+position = Vector2(1875, 1122)
+scale = Vector2(1.96146, 2.08704)
+texture = ExtResource("1_hanqu")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1804.0
+offset_top = 1774.0
+offset_right = 1896.0
+offset_bottom = 1805.0
+scale = Vector2(2.69604, 2.86335)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

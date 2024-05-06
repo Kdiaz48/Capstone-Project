@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuuogw0hr24hm"]
+
+[ext_resource type="Script" path="res://StudyMenu2.gd" id="1_gftob"]
+[ext_resource type="Texture2D" uid="uid://blu1k5dqg2j34" path="res://sceneImages/HiddenItemsSTUDY/STUDYMenu2.png" id="2_ccwlr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gftob")
+
+[node name="StudyMenu2" type="Sprite2D" parent="."]
+position = Vector2(1871, 1117)
+scale = Vector2(1.95729, 2.07778)
+texture = ExtResource("2_ccwlr")
+
+[node name="NextScene" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1828.0
+offset_top = 828.0
+offset_right = 1935.0
+offset_bottom = 859.0
+scale = Vector2(1.96847, 2.9883)
+text = "Next scene..."
+
+[node name="BackToScene" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1824.0
+offset_top = 742.0
+offset_right = 1951.0
+offset_bottom = 773.0
+scale = Vector2(1.78526, 2.81818)
+text = "Back to scene..."
+
+[connection signal="pressed" from="NextScene" to="." method="_on_next_scene_pressed"]
+[connection signal="pressed" from="BackToScene" to="." method="_on_back_to_scene_pressed"]

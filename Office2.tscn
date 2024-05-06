@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct6ufk6pw5hxy"]
+
+[ext_resource type="Script" path="res://Office2.gd" id="1_vevao"]
+[ext_resource type="Texture2D" uid="uid://bc0tx4t4te8y3" path="res://sceneImages/DialogueOFFICE/OFFICE2.png" id="1_xedcm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vevao")
+
+[node name="Office2" type="Sprite2D" parent="."]
+position = Vector2(1877, 1130)
+scale = Vector2(1.96354, 2.10185)
+texture = ExtResource("1_xedcm")
+
+[node name="Mr_Beifong" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1806.0
+offset_top = 564.0
+offset_right = 1904.0
+offset_bottom = 595.0
+scale = Vector2(4.25694, 4.34799)
+text = "Mr. Beifong"
+
+[node name="Chef Jordan" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1410.0
+offset_top = 558.0
+offset_right = 1509.0
+offset_bottom = 589.0
+scale = Vector2(3.32716, 4.50011)
+text = "Chef Jordan"
+
+[connection signal="pressed" from="Mr_Beifong" to="." method="_on_mr_beifong_pressed"]
+[connection signal="pressed" from="Chef Jordan" to="." method="_on_chef_jordan_pressed"]

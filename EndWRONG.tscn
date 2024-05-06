@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://gtmg8oy47054"]
+
+[ext_resource type="Texture2D" uid="uid://b6i3hn8e3hbnh" path="res://sceneImages/DialogueOFFICE/END/ENDWrong.png" id="1_pwvoj"]
+[ext_resource type="Script" path="res://EndWRONG.gd" id="1_q5n07"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5n07")
+
+[node name="EndWrong" type="Sprite2D" parent="."]
+position = Vector2(1882, 1121)
+scale = Vector2(1.95833, 2.07407)
+texture = ExtResource("1_pwvoj")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2512.0
+offset_top = 1812.0
+offset_right = 2604.0
+offset_bottom = 1843.0
+scale = Vector2(3.7533, 4.60361)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

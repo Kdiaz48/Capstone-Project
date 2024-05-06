@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://0grk3bpdhapo"]
+
+[ext_resource type="Script" path="res://StudyEnd.gd" id="1_87aud"]
+[ext_resource type="Texture2D" uid="uid://cuouj8l7imjy8" path="res://sceneImages/HiddenItemsSTUDY/STUDYEnd.png" id="2_y2xlb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87aud")
+
+[node name="StudyEnd" type="Sprite2D" parent="."]
+position = Vector2(1892, 1114)
+scale = Vector2(1.97604, 2.07593)
+texture = ExtResource("2_y2xlb")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1850.0
+offset_top = 740.0
+offset_right = 1942.0
+offset_bottom = 771.0
+scale = Vector2(2.40351, 3.03821)
+text = "Continue..."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

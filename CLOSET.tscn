@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://o6b12ibuijr5"]
+[gd_scene load_steps=6 format=3 uid="uid://o6b12ibuijr5"]
 
 [ext_resource type="Texture2D" uid="uid://dddcnkshb3hjb" path="res://sceneImages/HiddenItemsCLOSET/Closet.png" id="1_k8sl1"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_juwwy"]
 [ext_resource type="Script" path="res://drawer xcode.gd" id="3_ht6um"]
+[ext_resource type="Script" path="res://towel.gd" id="3_s3p72"]
+[ext_resource type="Script" path="res://photo on desk.gd" id="4_xti7h"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -18,21 +20,41 @@ scale = Vector2(3.19922, 2.21094)
 texture = ExtResource("1_k8sl1")
 script = ExtResource("2_juwwy")
 
-[node name="Control" type="Control" parent="Closet"]
+[node name="twoel" type="Control" parent="Closet"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("3_s3p72")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Closet/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Closet/twoel"]
 layout_mode = 0
 offset_left = -324.0
 offset_top = 403.0
 offset_right = -269.0
 offset_bottom = 479.0
 
-[node name="Button" type="Button" parent="Closet/Control/VBoxContainer"]
+[node name="Button" type="Button" parent="Closet/twoel/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="photo on desk" type="Control" parent="Closet"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_xti7h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Closet/photo on desk"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 61.0
+offset_right = 472.0
+offset_bottom = 133.0
+
+[node name="Button" type="Button" parent="Closet/photo on desk/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="drawer control" type="Control" parent="."]
 anchors_preset = 0
@@ -51,5 +73,9 @@ offset_bottom = 1357.0
 layout_mode = 2
 size_flags_vertical = 3
 
+[connection signal="mouse_entered" from="Closet/twoel/VBoxContainer/Button" to="Closet" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Closet/twoel/VBoxContainer/Button" to="Closet" method="change_cursor_back"]
+[connection signal="mouse_entered" from="Closet/photo on desk/VBoxContainer/Button" to="Closet" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Closet/photo on desk/VBoxContainer/Button" to="Closet" method="change_cursor_back"]
 [connection signal="mouse_entered" from="drawer control/VBoxContainer/Button" to="Closet" method="change_cursor_hand"]
 [connection signal="mouse_exited" from="drawer control/VBoxContainer/Button" to="Closet" method="change_cursor_back"]

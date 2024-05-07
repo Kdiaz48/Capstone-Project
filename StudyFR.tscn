@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2ypinencaofg"]
+[gd_scene load_steps=5 format=3 uid="uid://d2ypinencaofg"]
 
 [ext_resource type="Texture2D" uid="uid://b8fexkweu3mwm" path="res://study1.png" id="1_l8s42"]
+[ext_resource type="Script" path="res://hand cursor.gd" id="2_vc8yw"]
+[ext_resource type="Script" path="res://cups.gd" id="3_3u6pw"]
+[ext_resource type="Script" path="res://menu.gd" id="4_fi2p1"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,3 +22,62 @@ offset_bottom = 8.0
 position = Vector2(1877, 1122)
 scale = Vector2(3.67773, 2.2207)
 texture = ExtResource("1_l8s42")
+script = ExtResource("2_vc8yw")
+
+[node name="cups" type="Control" parent="Study1"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_3u6pw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Study1/cups"]
+layout_mode = 0
+offset_left = -106.0
+offset_top = 76.0
+offset_right = -68.0
+offset_bottom = 108.0
+
+[node name="Button" type="Button" parent="Study1/cups/VBoxContainer"]
+layout_mode = 2
+
+[node name="menu" type="Control" parent="Study1"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_fi2p1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Study1/menu"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 341.0
+offset_right = 301.0
+offset_bottom = 385.0
+
+[node name="Button" type="Button" parent="Study1/menu/VBoxContainer"]
+layout_mode = 2
+
+[node name="wallet" type="Control" parent="Study1"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Study1/wallet"]
+layout_mode = 0
+offset_left = -473.0
+offset_top = 336.0
+offset_right = -402.0
+offset_bottom = 409.0
+
+[node name="Button" type="Button" parent="Study1/wallet/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="mouse_entered" from="Study1/cups/VBoxContainer/Button" to="Study1" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Study1/cups/VBoxContainer/Button" to="Study1" method="change_cursor_back"]
+[connection signal="mouse_entered" from="Study1/menu/VBoxContainer/Button" to="Study1" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Study1/menu/VBoxContainer/Button" to="Study1" method="change_cursor_back"]
+[connection signal="mouse_entered" from="Study1/wallet/VBoxContainer/Button" to="Study1" method="change_cursor_hand"]
+[connection signal="mouse_exited" from="Study1/wallet/VBoxContainer/Button" to="Study1" method="change_cursor_back"]

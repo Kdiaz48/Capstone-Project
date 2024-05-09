@@ -75,7 +75,10 @@ size_flags_vertical = 3
 
 [connection signal="mouse_entered" from="warehousebox button 1/VBoxContainer/box button" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="warehousebox button 1/VBoxContainer/box button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="warehousebox button 1/VBoxContainer/box button" to="." method="_on_box_button_pressed"]
 [connection signal="mouse_entered" from="warehouse box 2/VBoxContainer/Button" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="warehouse box 2/VBoxContainer/Button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="warehouse box 2/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="warehouse letter/VBoxContainer/Button" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="warehouse letter/VBoxContainer/Button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="warehouse letter/VBoxContainer/Button" to="warehouse letter" method="_on_button_pressed"]

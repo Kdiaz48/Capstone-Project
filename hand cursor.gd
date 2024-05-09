@@ -14,3 +14,16 @@ func change_cursor_back():
 
 
 
+
+
+
+func _on_box_button_pressed():
+	get_tree().change_scene_to_file("res://WarehouseBoxHint.tscn")
+
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://WarehouseCoordinates.tscn")
+
+
+

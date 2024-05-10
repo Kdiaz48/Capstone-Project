@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://lh6fc0yis8fy" path="res://sceneImages/HiddenItemsLIVINGROOM/Living Room.png" id="1_e6v4x"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_ysds8"]
 [ext_resource type="Script" path="res://cabinet contrl.gd" id="3_ud251"]
-[ext_resource type="Script" path="res://clock cntrl.gd" id="4_ob6dr"]
+[ext_resource type="Script" path="res://clockcntrl.gd" id="4_j4puv"]
 [ext_resource type="Script" path="res://purse.gd" id="5_rh6d6"]
 
 [node name="LIVING ROOM FRR" type="Sprite2D"]
@@ -21,10 +21,10 @@ script = ExtResource("3_ud251")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="cabinet contrl"]
 layout_mode = 0
-offset_left = 217.0
-offset_top = 15.0
-offset_right = 357.0
-offset_bottom = 149.0
+anchor_left = 5.425
+anchor_top = 0.375
+anchor_right = 8.925
+anchor_bottom = 3.725
 
 [node name="Button" type="Button" parent="cabinet contrl/VBoxContainer"]
 layout_mode = 2
@@ -35,7 +35,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("4_ob6dr")
+script = ExtResource("4_j4puv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="clockcntrl"]
 layout_mode = 0
@@ -68,7 +68,10 @@ size_flags_vertical = 3
 
 [connection signal="mouse_entered" from="cabinet contrl/VBoxContainer/Button" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="cabinet contrl/VBoxContainer/Button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="cabinet contrl/VBoxContainer/Button" to="cabinet contrl" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="clockcntrl/VBoxContainer/Button" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="clockcntrl/VBoxContainer/Button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="clockcntrl/VBoxContainer/Button" to="clockcntrl" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="purse/VBoxContainer/Button" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="purse/VBoxContainer/Button" to="." method="change_cursor_back"]
+[connection signal="pressed" from="purse/VBoxContainer/Button" to="purse" method="_on_button_pressed"]

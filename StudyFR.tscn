@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2ypinencaofg"]
+[gd_scene load_steps=6 format=3 uid="uid://d2ypinencaofg"]
 
 [ext_resource type="Texture2D" uid="uid://cv34bwyp4rpcg" path="res://study1.png" id="1_l8s42"]
 [ext_resource type="Script" path="res://hand cursor.gd" id="2_vc8yw"]
 [ext_resource type="Script" path="res://cups.gd" id="3_3u6pw"]
 [ext_resource type="Script" path="res://menu.gd" id="4_fi2p1"]
+[ext_resource type="Script" path="res://wallet.gd" id="5_fapmj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -40,6 +41,7 @@ offset_bottom = 108.0
 
 [node name="Button" type="Button" parent="Study1/cups/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="menu" type="Control" parent="Study1"]
 layout_mode = 3
@@ -57,12 +59,14 @@ offset_bottom = 385.0
 
 [node name="Button" type="Button" parent="Study1/menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="wallet" type="Control" parent="Study1"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("5_fapmj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Study1/wallet"]
 layout_mode = 0
@@ -77,7 +81,10 @@ size_flags_vertical = 3
 
 [connection signal="mouse_entered" from="Study1/cups/VBoxContainer/Button" to="Study1" method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Study1/cups/VBoxContainer/Button" to="Study1" method="change_cursor_back"]
+[connection signal="pressed" from="Study1/cups/VBoxContainer/Button" to="Study1/cups" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="Study1/menu/VBoxContainer/Button" to="Study1" method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Study1/menu/VBoxContainer/Button" to="Study1" method="change_cursor_back"]
+[connection signal="pressed" from="Study1/menu/VBoxContainer/Button" to="Study1/menu" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="Study1/wallet/VBoxContainer/Button" to="Study1" method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Study1/wallet/VBoxContainer/Button" to="Study1" method="change_cursor_back"]
+[connection signal="pressed" from="Study1/wallet/VBoxContainer/Button" to="Study1/wallet" method="_on_button_pressed"]

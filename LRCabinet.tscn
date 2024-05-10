@@ -26,4 +26,14 @@ offset_bottom = 705.0
 scale = Vector2(3.24194, 4.11382)
 text = "Back to scene..."
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1776.0
+offset_top = 816.0
+offset_right = 1883.0
+offset_bottom = 847.0
+scale = Vector2(3.32, 3.31638)
+text = "Next scene..."
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

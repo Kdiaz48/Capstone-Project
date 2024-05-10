@@ -15,8 +15,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Closet" type="Sprite2D" parent="."]
-position = Vector2(1630, 1111)
-scale = Vector2(3.19922, 2.21094)
+position = Vector2(1880, 1117)
+scale = Vector2(3.6875, 2.22266)
 texture = ExtResource("1_k8sl1")
 script = ExtResource("2_juwwy")
 
@@ -64,10 +64,10 @@ script = ExtResource("3_ht6um")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="drawer control"]
 layout_mode = 0
-offset_left = 2143.0
-offset_top = 1285.0
-offset_right = 2569.0
-offset_bottom = 1357.0
+offset_left = 2509.0
+offset_top = 1295.0
+offset_right = 2935.0
+offset_bottom = 1367.0
 
 [node name="Button" type="Button" parent="drawer control/VBoxContainer"]
 layout_mode = 2
@@ -75,7 +75,10 @@ size_flags_vertical = 3
 
 [connection signal="mouse_entered" from="Closet/twoel/VBoxContainer/Button" to="Closet" method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Closet/twoel/VBoxContainer/Button" to="Closet" method="change_cursor_back"]
+[connection signal="pressed" from="Closet/twoel/VBoxContainer/Button" to="Closet/twoel" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="Closet/photo on desk/VBoxContainer/Button" to="Closet" method="change_cursor_hand"]
 [connection signal="mouse_exited" from="Closet/photo on desk/VBoxContainer/Button" to="Closet" method="change_cursor_back"]
+[connection signal="pressed" from="Closet/photo on desk/VBoxContainer/Button" to="Closet/photo on desk" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="drawer control/VBoxContainer/Button" to="Closet" method="change_cursor_hand"]
 [connection signal="mouse_exited" from="drawer control/VBoxContainer/Button" to="Closet" method="change_cursor_back"]
+[connection signal="pressed" from="drawer control/VBoxContainer/Button" to="drawer control" method="_on_button_pressed"]

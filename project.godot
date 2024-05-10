@@ -14,3 +14,7 @@ config/name="Capstone Project"
 run/main_scene="res://MAINSCHENE.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameMusic="*res://game MUSIC.tscn"

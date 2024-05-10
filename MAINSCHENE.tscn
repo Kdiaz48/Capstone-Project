@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://7k5jxwfbgxrm"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_nr7sq"]
-[ext_resource type="Texture2D" uid="uid://fjkgqsr6yx8g" path="res://kd03563_start_screen_for_a_hidden_item_detective_game_called_Wh_5ed8db38-de70-415d-be0b-bd00180864f9.png" id="2_mspv8"]
+[ext_resource type="Texture2D" uid="uid://bsfbtm6uq7owo" path="res://kd03563_start_screen_for_a_hidden_item_detective_game_called_Wh_5ed8db38-de70-415d-be0b-bd00180864f9.png" id="2_mspv8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

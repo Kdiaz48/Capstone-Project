@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdb1bdlj7f7d7"]
+
+[ext_resource type="AudioStream" uid="uid://sjmvn0q85fgj" path="res://mysterious-celesta-114064.mp3" id="1_0s8q7"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_0s8q7")
+autoplay = true
